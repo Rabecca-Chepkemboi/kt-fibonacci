@@ -17,7 +17,9 @@ class MainActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.rv_fibonacci)
 
         fibonacciList = FibonacciGenerator.generateFibonacciNumbers()
-        recyclerView.ViewHolder = FibonacciAdapter(fibonacciList)
+        recyclerView.adapter = FibonacciAdapter(fibonacciList)
+//        val viewHolder = FibonacciAdapter.ViewHolder()
+//        val ViewHolder = FibonacciAdapter(fibonacciList)
         recyclerView.layoutManager = LinearLayoutManager(this)
     }
 //    override fun onCreate(savedInstanceState: Bundle?) {
